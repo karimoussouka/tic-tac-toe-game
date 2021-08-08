@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Merriweather Sans", sans-serif;
+    color: #4c6986;
+}
+
+.title {
+    max-width: 500px;
+}
+
+.container {
+    max-width: 1440px;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.restart {
+    width: 175px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: 2px solid #4c6986;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.restart:hover {
+    background-color: #4c6986;
+    color: white;
+}
+
+.game {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    /* background-color: #9a9a9a; */
+    font-size: 24px;
+}
+
+.header .player-X {
+    flex: 1;
+    border-bottom: 5px solid #eee;
+    padding-bottom: 8px;
+}
+
+.header .player-O {
+    flex: 1;
+    border-bottom: 5px solid #eee;
+    padding-bottom: 8px;
+}
+
+.player-X.active {
+    color: #36acc3;
+    border-color: #36acc3;
+}
+
+.player-O.active {
+    color: #d2b9f8;
+    border-color: #d2b9f8;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 0px;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.board-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.board-title:not(:nth-child(3n)) {
+    border-right: solid 3px rgb(137, 163, 189, 0.5);
+}
+
+.board-title:not(:nth-last-child(-n + 3)) {
+    border-bottom: solid 3px rgb(137, 163, 189, 0.5);
+}
+
+.board-title:hover {
+    background-color: #eeeeee;
+}
+
+.board-title .X-color {
+    color: #36acc3;
+    font-weight: bolder;
+}
+
+.board-title .O-color {
+    color: #d2b9f8;
+    font-weight: bolder;
+}
+
+.tile-win span {
+    color: #23ce6b !important;
+    transition: all ease 1s;
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+    }
+    .left {
+        margin-bottom: 50px;
+    }
+}
