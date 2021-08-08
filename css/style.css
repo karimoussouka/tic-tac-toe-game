@@ -56,8 +56,8 @@ h1 {
 
 .game {
     margin: auto;
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     display: flex;
     flex-direction: column;
 }
